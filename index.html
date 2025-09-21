@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Photo & Video Portfolio — CHannu Patil</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#">Channu Patil</a>
+      <nav>
+        <button id="filter-all" class="filter-btn active">All</button>
+        <button id="filter-photos" class="filter-btn">Photos</button>
+        <button id="filter-videos" class="filter-btn">Videos</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Photo & Video Editing Portfolio</h1>
+        <p>High-quality photo retouching, color grading and cinematic video edits for social, ads and brands.</p>
+        <a class="cta" href="#contact">Hire Me</a>
+      </div>
+      <div class="hero-right">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlHOK2ntAjrRcr6BEPDjQi5ZvoLcUyY9QSnXVcUQI345kz5K7ME-ZNrNltrREdzt1n6bzwLcLnU1FN0Ik0UHHFf_g0BpZYLa00sv_KzdbYmyBpFuQihXVRIotMSQp3Q6wmrUMj4tGf1N_LZ3iuanQIj6NByzuagXhA9Dl6iFmneOgPX5xotg1KjpsQh6NK/s6000/20210727235157_IMG_6919%20(1)%20(1)%20(1).jpg" alt="Sample work thumbnail">
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <!-- gallery items use data-type="photo" or "video" -->
+      <article class="card" data-type="photo">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvfJsupkgSYhURgIhSP3gxRfnw-sHULSD-dDkT1f0dxzH7fNkYUhKoeRioCwG6nbV_reCp5qQWR-z67RAqBg0DAPSdVyh8RI4zSEe4s4eLYjYiVn1XSH1e-a2YIUZda2bou09uXeTC3rpQali2HpdPk3fqd-H9iZiE3cO-uNXrDLnNUti-mGzzESEFNEB3/s1920/yt%20tumbnail%201%20draft.jpg" alt="Edited photo 1">
+        <div class="card-body">
+          <h3>Youtube thumbnail</h3>
+          <p>Color correction and texture enhancement.</p>
+          <button class="view-btn" data-type="photo" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvfJsupkgSYhURgIhSP3gxRfnw-sHULSD-dDkT1f0dxzH7fNkYUhKoeRioCwG6nbV_reCp5qQWR-z67RAqBg0DAPSdVyh8RI4zSEe4s4eLYjYiVn1XSH1e-a2YIUZda2bou09uXeTC3rpQali2HpdPk3fqd-H9iZiE3cO-uNXrDLnNUti-mGzzESEFNEB3/s1920/yt%20tumbnail%201%20draft.jpg">View</button>
+        </div>
+      </article>
+
+      <article class="card" data-type="photo">
+        <img src="assets/thumb2.jpg" alt="Edited photo 2">
+        <div class="card-body">
+          <h3>Portrait Retouch</h3>
+          <p>Skin retouching, dodge and burn, final grade.</p>
+          <button class="view-btn" data-type="photo" data-src="assets/thumb2.jpg">View</button>
+        </div>
+      </article>
+
+      <article class="card" data-type="video">
+        <img src="assets/video1.jpg" alt="Video project 1">
+        <div class="card-body">
+          <h3>Short Film Color Grade</h3>
+          <p>Cinematic LUT application & final grade.</p>
+          <button class="view-btn" data-type="video" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ">Play</button>
+        </div>
+      </article>
+
+      <article class="card" data-type="video">
+        <img src="assets/video2.jpg" alt="Video project 2">
+        <div class="card-body">
+          <h3>Product Promo Edit</h3>
+          <p>Fast-paced edit with sound design.</p>
+          <button class="view-btn" data-type="video" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ">Play</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact / Bookings</h2>
+      <form id="contactForm">
+        <label>Name<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Message<textarea name="message" rows="4" required></textarea></label>
+        <button type="submit" class="cta">Send Message</button>
+      </form>
+      <p class="note">Or contact via WhatsApp: <a href="https://wa.me/9986291937?text=Hi%20I%20want%20to%20book%20an%20editing%20service" target="_blank">+91 99862 91937</a></p>
+    </section>
+  </main>
+
+  <!-- Modal for viewing images / videos -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-content">
+      <button id="lightbox-close" class="lightbox-close" aria-label="Close">✕</button>
+      <div id="lightbox-media"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Patil Prints — Photo & Video Editing</p>
+      <p><small>Built with HTML, CSS & JavaScript • Replace sample assets with your work</small></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
