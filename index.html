@@ -1,117 +1,131 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Photo & Video Portfolio — Channu Patil</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CHANNU PATIL — Visual Editor</title>
+<meta name="description" content="Channu Patil — Photo & Video Editor. My focus is on clean, impactful aesthetics. I craft images that speak for themselves." />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <a class="logo" href="#">Channu Patil</a>
-      <nav class="filters">
-        <button id="filter-all" class="filter-btn active">All</button>
-        <button id="filter-photos" class="filter-btn">Photos</button>
-        <button id="filter-videos" class="filter-btn">Videos</button>
-      </nav>
+
+<header>
+  <nav class="navlinks">
+    <a href="#">HOME</a>
+    <a href="mywork.html">MY WORK</a> 
+    <a href="#gear">MY GEAR</a>
+    <a href="#shop">SHOP</a>
+    <a href="info.html">INFO</a>
+    <a href="#"><span class="cart-icon">🛒</span></a>
+  </nav>
+</header>
+
+<div class="main-container">
+
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <h1 class="hero-title">HI I'M <span class="name">CHANNU PATIL</span></h1>
+      <p class="hero-sub">My focus is on **clean, impactful aesthetics**. I craft images that speak for themselves.</p>
+      <p class="hero-sub-kicker">HERE'S THE REACH I'VE BUILT OVER THE PAST 7 YEARS:</p>
+
+      <div class="social-row" aria-hidden="false">
+        
+        <div class="social-block">
+          <div class="social-icon">▶</div>
+          <div>
+            <div class="social-stat" data-target="120000">120K</div>
+            <div class="social-label">YouTube</div>
+          </div>
+        </div>
+
+        <div class="social-block">
+          <div class="social-icon">📷</div>
+          <div>
+            <div class="social-stat" data-target="3000">3K</div>
+            <div class="social-label">Instagram</div>
+          </div>
+        </div>
+
+        <div class="social-block">
+          <div class="social-icon">✖</div>
+          <div>
+            <div class="social-stat" data-target="000">000K</div>
+            <div class="social-label">X</div>
+          </div>
+        </div>
+
+        <div class="social-block">
+          <div class="social-icon">💬</div>
+          <div>
+            <div class="social-stat" data-target="000">000K</div>
+            <div class="social-label">Discord</div>
+          </div>
+        </div>
+        
+      </div>
     </div>
-  </header>
 
-  <!-- Hero -->
-  <main class="container">
-    <section class="hero">
-      <div class="hero-left">
-        <h1>Photo & Video Editing Portfolio</h1>
-        <p>I specialize in high-quality photo retouching, color grading, and cinematic video editing for social media, ads, and brands. I transform raw visuals into polished, engaging content with attention to detail, ensuring every project aligns with brand identity and stands out in today’s digital landscape.</p>
-        <a class="cta" href="#contact">Hire Me</a>
+    <div class="hero-right">
+      <div class="portrait">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlHOK2ntAjrRcr6BEPDjQi5ZvoLcUyY9QSnXVcUQI345kz5K7ME-ZNrNltrREdzt1n6bzwLcLnU1FN0Ik0UHHFf_g0BpZYLa00sv_KzdbYmyBpFuQihXVRIotMSQp3Q6wmrUMj4tGf1N_LZ3iuanQIj6NByzuagXhA9Dl6iFmneOgPX5xotg1KjpsQh6NK/s6000/20210727235157_IMG_6919%20(1)%20(1)%20(1).jpg" alt="Channu Patil portrait">
       </div>
-      <div class="hero-right">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjlHOK2ntAjrRcr6BEPDjQi5ZvoLcUyY9QSnXVcUQI345kz5K7ME-ZNrNltrREdzt1n6bzwLcLnU1FN0Ik0UHHFf_g0BpZYLa00sv_KzdbYmyBpFuQihXVRIotMSQp3Q6wmrUMj4tGf1N_LZ3iuanQIj6NByzuagXhA9Dl6iFmneOgPX5xotg1KjpsQh6NK/s6000/20210727235157_IMG_6919%20(1)%20(1)%20(1).jpg" alt="Channu Patil portfolio preview">
+    </div>
+  </section>
+
+  <section class="what" id="what">
+    <h2>WHAT I'VE DONE</h2>
+
+    <div class="panels" role="list">
+      <div class="panel green" role="listitem">
+        <h3>500M+ VIEWS ACROSS PLATFORMS</h3>
+        <p>INCLUDING YOUTUBE, TWITTER, TIKTOK AND INSTAGRAM.</p>
       </div>
-    </section>
 
-    <!-- Gallery -->
-    <section class="gallery" id="gallery">
-      <!-- Photo 1 -->
-      <article class="card" data-type="photo">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvfJsupkgSYhURgIhSP3gxRfnw-sHULSD-dDkT1f0dxzH7fNkYUhKoeRioCwG6nbV_reCp5qQWR-z67RAqBg0DAPSdVyh8RI4zSEe4s4eLYjYiVn1XSH1e-a2YIUZda2bou09uXeTC3rpQali2HpdPk3fqd-H9iZiE3cO-uNXrDLnNUti-mGzzESEFNEB3/s1920/yt%20tumbnail%201%20draft.jpg" alt="YouTube thumbnail design">
-        <div class="card-body">
-          <h3>Youtube Thumbnail</h3>
-          <p>Color correction and texture enhancement.</p>
-          <button class="view-btn" data-type="photo" data-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhvfJsupkgSYhURgIhSP3gxRfnw-sHULSD-dDkT1f0dxzH7fNkYUhKoeRioCwG6nbV_reCp5qQWR-z67RAqBg0DAPSdVyh8RI4zSEe4s4eLYjYiVn1XSH1e-a2YIUZda2bou09uXeTC3rpQali2HpdPk3fqd-H9iZiE3cO-uNXrDLnNUti-mGzzESEFNEB3/s1920/yt%20tumbnail%201%20draft.jpg">View</button>
-        </div>
-      </article>
+      <div class="panel purple" role="listitem">
+        <h3>400+ VIDEOS IN PREMIERE PRO</h3>
+        <p>I EDIT ALL MY OWN VIDEOS FROM START TO FINISH.</p>
+      </div>
 
-      <!-- Photo 2 -->
-      <article class="card" data-type="photo">
-        <img src="assets/thumb2.jpg" alt="Skin retouched portrait">
-        <div class="card-body">
-          <h3>Portrait Retouch</h3>
-          <p>Skin retouching, dodge and burn, final grade.</p>
-          <button class="view-btn" data-type="photo" data-src="assets/thumb2.jpg">View</button>
-        </div>
-      </article>
+      <div class="panel blue" role="listitem">
+        <h3>600+ THUMBNAILS IN PHOTOSHOP</h3>
+        <p>I MAKE ALL MY SOCIAL MEDIA GRAPHICS AND YOUTUBE THUMBNAILS.</p>
+      </div>
+    </div>
+  </section>
 
-      <!-- Video 1 -->
-      <article class="card" data-type="video">
-        <img src="assets/video1.jpg" alt="Short film editing">
-        <div class="card-body">
-          <h3>Short Film Color Grade</h3>
-          <p>Cinematic LUT application & final grade.</p>
-          <button class="view-btn" data-type="video" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ">Play</button>
-        </div>
-      </article>
+  <section class="worked" id="worked">
+    <h3>WORKED WITH</h3>
+    <div class="logos">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Epic_Games_logo.svg" alt="Epic Games" class="scroll-reveal">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/MSI_logo.svg" alt="MSI" class="scroll-reveal">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/LG_logo.svg" alt="LG" class="scroll-reveal">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/SteelSeries.svg" alt="SteelSeries" class="scroll-reveal">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/G-Fuel_logo.svg" alt="G-Fuel" class="scroll-reveal">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Filmora_logo.svg" alt="Filmora" class="scroll-reveal">
+    </div>
+  </section>
 
-      <!-- Video 2 -->
-      <article class="card" data-type="video">
-        <img src="assets/video2.jpg" alt="Product promo edit">
-        <div class="card-body">
-          <h3>Product Promo Edit</h3>
-          <p>Fast-paced edit with sound design.</p>
-          <button class="view-btn" data-type="video" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ">Play</button>
-        </div>
-      </article>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="contact">
-      <h2>Contact / Bookings</h2>
-      <form id="contactForm">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit" class="cta">Send Message</button>
-      </form>
-      <p class="note">Or contact via WhatsApp:
-        <a href="https://wa.me/919986291937?text=Hi%20I%20want%20to%20book%20an%20editing%20service" target="_blank">+91 99862 91937</a>
-      </p>
-    </section>
-  </main>
-
-  <!-- Modal Lightbox -->
-  <div id="lightbox" class="lightbox" aria-hidden="true">
-    <div class="lightbox-content">
-      <button id="lightbox-close" class="lightbox-close" aria-label="Close">✕</button>
-      <div id="lightbox-media"></div>
+</div> <footer>
+  <div class="footer-bottom-row">
+    <div class="copy">© 2025 FTIER - ALL RIGHTS RESERVED</div>
+    <div class="built-by">~ BUILT BY FLEA ~</div>
+  </div>
+  <div class="footer-links-container">
+    <div class="footer-links-col">
+        <a href="#">HOME</a>
+        <a href="#">CONTACT</a>
+        <a href="#">SHOP</a>
+    </div>
+    <div class="footer-links-col">
+        <a href="#">TERMS & CONDITIONS</a>
+        <a href="#">PRIVACY POLICY</a>
+        <a href="#">FAQS</a>
     </div>
   </div>
+</footer>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Patil Prints — Photo & Video Editing</p>
-      <p><small>Built with HTML, CSS & JavaScript • Replace sample assets with your work</small></p>
-    </div>
-  </footer>
+<script src="script.js"></script>
 
-  <script src="script.js"></script>
 </body>
 </html>
