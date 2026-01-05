@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Work</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #0b0b0b;
+      color: #ffffff;
+    }
+
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: center;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    nav {
+      width: 90%;
+      max-width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #ffffff;
+    }
+
+    .logo span {
+      color: #00ff7f;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: #bfbfbf;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    ul li a:hover,
+    ul li a.active {
+      color: #00ff7f;
+    }
+
+    /* Section */
+    .work-section {
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .work-section h1 {
+      font-size: 48px;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+
+    .work-section p {
+      font-size: 14px;
+      color: #9e9e9e;
+      letter-spacing: 1px;
+      margin-bottom: 60px;
+    }
+
+    /* Cards */
+    .work-grid {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .card {
+      background: #111;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .work-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .work-section h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="mywork.html">MY WORK</a></li>
+        <li><a href="index.html">MY GEAR</a></li>
+        <li><a href="index.html" class="active">SHOP</a></li>
+        <li><a href="info.html">INFO</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Work Section -->
+  <section class="work-section">
+    <h1>MY WORK</h1>
+    <p>A LOOK INTO MY RECENT JOURNEY OF MOTION GRAPHICS.</p>
+
+    <div class="work-grid">
+      <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkK-F0PGtbJJh28iZYMuHVUy7QYdQ9y91vym3ZHyWGgG41eOld_68kBnvf3B_z3XjSVbyBLb3UQ99z5R7FC6IoRfLejJSaIYIchagecFZjMzOzDF0a-tcwJnXVUtQrMhIC5L-tYlj8NV_QLl6jqgV0dUcQGWPIuo5MuNN7ZRs3LYRoXk635-K6z46US80B/s7200/nagu%20sk%20final.jpg" alt="Work 1" />
+      </div>
+      <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUIFmNK6BGTLV8CKUBOAPxPkO27TysPSYTeSQ34ngPI8tx2fLkQH2m8wXjrHeG_C2CH_nD2Wp7EGz1GqwjXGFl5AW-Pr6Lhg7dTFJfXo-u0JeZ_SVcjvTgh4rci81JP3Fip-4j8Azyc46At37B92BVem3C2FtknB-nYqlpu2T3dOyAcVa7Cqwtvr8mZM6E/s2700/insta%20post%20everything.png" alt="Work 2" />
+      </div>
+      <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgI1nuR9Ckzvh3VZpU7WsavFrDxQsaXpDsgc90UedJlfR3kQNO8pRVf-dmE752lNeNnNoNg0y9tL7brE2VeFmHG69vHXleOE3T_P_Fa7ym4KWhO0q-dhhiQ9KiEXaHnsuvCSGdCdry3uJv12b25YyztlX7c4cAxrvW4EthTwwxoOX58P8HTJ9Ry9gNpQXZ9/s1350/From%20Indian%20Idol,%20Sa%20Rega%20Ma%20Pa%20L%E2%80%99il%20Champs,%20Padutha%20Theeyaga%20to%20our%20very%20own%20VTU%20stage%E2%80%94%20A%20voice.jpg" alt="Work 3" />
+      </div>
+      <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhinezuLqH4zx85uVS3M8kOcoQ7gCfyUrRNOKT0JL3QcAVt3dqFDgexbOXcd8LC3xZeHrz977SgaDYiAy2nOyGkX52vk4jE2PJcf46xTDsrcaHh9iJrW7qSg1_l6bdoDZ774qG3lJUwkLBA9yLVEXst4Xnlzil7mH8-7xzzehOcuCVuxw096-oRVkaGIpC7/s1349/_%E2%80%9CLights,%20camera,%20action!%20%F0%9F%8E%A5%E2%9C%A8%20We%20are%20glad%20to%20announce%20that%20the%20well%20known%20celebrity%20@krishna_aj.jpg" alt="Work 4" />
+      </div>
+      <div class="card">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg-1tX3VRjtqksH_6NtVnHp6s4VEhqBWYhlUK5PeyH1OfoFbGK5gqwJw-kZa15TvfwtlM0OejVy0Kyou2X0kxjJ0flgMAtCGEMD0kQRLHq3BFpmE8lfLAc14yjN85snJGNK5GWiZo9twX3TmUIB1nsLtbQR2LGfwKusZ6XJ3OkqKWYKoYV8SpE2PBfSuXR_/s1349/Many%20voices%20but%20only%20one%20performer%20%F0%9F%8E%A4%F0%9F%8E%99%20......Get%20ready%20to%20Witness%20%20when%20mimicry%20meets%20laughter%20.jpg" alt="Work 5" />
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x600" alt="Work 6" />
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x600" alt="Work 7" />
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
