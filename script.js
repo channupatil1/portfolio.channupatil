@@ -1,46 +1,50 @@
-// Filtering and lightbox behavior
-document.addEventListener('DOMContentLoaded', function(){
-  const btnAll = document.getElementById('filter-all');
-  const btnPhotos = document.getElementById('filter-photos');
-  const btnVideos = document.getElementById('filter-videos');
-  const cards = Array.from(document.querySelectorAll('.card'));
-  const filters = {all:()=>true, photo:(c)=>c.dataset.type==='photo', video:(c)=>c.dataset.type==='video'};
-  const buttons = [btnAll, btnPhotos, btnVideos];
-  function setFilter(type){
-    buttons.forEach(b=>b.classList.remove('active'));
-    if(type==='all') btnAll.classList.add('active');
-    if(type==='photo') btnPhotos.classList.add('active');
-    if(type==='video') btnVideos.classList.add('active');
-    cards.forEach(c=> c.style.display = filters[type](c) ? '' : 'none');
+// --- SCROLL REVEAL EFFECT FOR LOGOS AND PORTFOLIO ITEMS ---
+// Select all elements with the 'scroll-reveal' class
+const scrollRevealElements = document.querySelectorAll('.scroll-reveal');
+
+// Function to handle the intersection of elements
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    // Check if the element is visible
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      // Stop observing after the animation has been triggered once
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  // Option: Trigger when 10% of the element is visible
+  threshold: 0.1 
+});
+
+// Start observing all elements with the 'scroll-reveal' class
+scrollRevealElements.forEach(el => {
+  observer.observe(el);
+});
+
+
+// --- ANIMATE SOCIAL COUNTERS (Runs only on index.html where social-stat exists) ---
+document.querySelectorAll('.social-stat').forEach(el=>{
+  const target = +el.getAttribute('data-target') || 0;
+  const start = 0;
+  const duration = 1500;
+  let startTime = null;
+  function step(ts){
+    if(!startTime) startTime = ts;
+    const progress = Math.min((ts - startTime)/duration, 1);
+    const eased = Math.pow(progress, 0.8);
+    const current = Math.floor(start + (target - start) * eased);
+    // friendly display
+    if (target >= 1000000) el.innerText = (current/1000000).toFixed(2) + 'M';
+    else if (target >= 1000) el.innerText = Math.floor(current/1000) + 'K';
+    else el.innerText = current;
+    if(progress < 1) requestAnimationFrame(step);
+    else {
+      // final formatted
+      if (target >= 1000000) el.innerText = (target/1000000).toFixed(2) + 'M';
+      else if (target >= 1000) el.innerText = Math.floor(target/1000) + 'K';
+      else el.innerText = target;
+    }
   }
-  btnAll.addEventListener('click', ()=> setFilter('all'));
-  btnPhotos.addEventListener('click', ()=> setFilter('photo'));
-  btnVideos.addEventListener('click', ()=> setFilter('video'));
-
-  // Lightbox
-  const lightbox = document.getElementById('lightbox');
-  const lightboxMedia = document.getElementById('lightbox-media');
-  const closeBtn = document.getElementById('lightbox-close');
-  document.querySelectorAll('.view-btn').forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      const type = btn.dataset.type;
-      const src = btn.dataset.src;
-      lightboxMedia.innerHTML = '';
-      if(type==='photo'){
-        const img = document.createElement('img'); img.src = src; img.alt='Preview'; lightboxMedia.appendChild(img);
-      } else {
-        const iframe = document.createElement('iframe'); iframe.src = src + '?autoplay=1'; iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'; lightboxMedia.appendChild(iframe);
-      }
-      lightbox.style.display = 'flex'; lightbox.setAttribute('aria-hidden','false');
-    });
-  });
-  closeBtn.addEventListener('click', ()=>{ lightbox.style.display='none'; lightbox.setAttribute('aria-hidden','true'); lightboxMedia.innerHTML=''; });
-  lightbox.addEventListener('click', (e)=>{ if(e.target===lightbox) { lightbox.style.display='none'; lightbox.setAttribute('aria-hidden','true'); lightboxMedia.innerHTML=''; } });
-
-  // Contact form simple demo behavior
-  document.getElementById('contactForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    alert('Thanks! Message received. I will contact you soon.');
-    this.reset();
-  });
+  requestAnimationFrame(step);
 });
